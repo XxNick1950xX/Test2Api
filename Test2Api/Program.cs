@@ -29,6 +29,11 @@ namespace Test2Api
 
             app.MapControllers();
 
+            app.MapGet("/test", (HttpContext httpContext) =>
+            {
+                return "test";
+            });
+
             app.Run();
         }
     }
